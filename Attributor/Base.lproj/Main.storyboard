@@ -27,6 +27,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a52-0C-TvN">
                                 <rect key="frame" x="20" y="550" width="50" height="30"/>
                                 <animations/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                 <state key="normal" title="Outline"/>
                                 <connections>
                                     <action selector="outlineBodySelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2oh-R9-tLB"/>
@@ -89,6 +90,7 @@
                     <connections>
                         <outlet property="body" destination="H9G-cg-gNe" id="dL3-SD-mor"/>
                         <outlet property="headline" destination="Bod-gc-uZa" id="3RW-5m-s7D"/>
+                        <outlet property="outlineButton" destination="a52-0C-TvN" id="Bcj-CV-Q4u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
