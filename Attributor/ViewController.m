@@ -25,9 +25,37 @@
                             NSStrokeColorAttributeName: self.outlineButton.tintColor }
                    range:NSMakeRange(0, [title length])];
     [self.outlineButton setAttributedTitle:title forState:UIControlStateNormal];
-     
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self usePreferredFonts];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(preferredFontsChanged:)
+                                                 name:UIContentSizeCategoryDidChangeNotification
+                                               object:nil];
+
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIContentSizeCategoryDidChangeNotification
+                                                  object:nil];
+}
+    
+- (void)preferredFontsChanged:(NSNotification *)notification
+{
+    [self usePreferredFonts];
+}
+    
+- (void)usePreferredFonts
+{
+    self.body.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    self.headline.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    
+}
 - (IBAction)changeBodySelectionColorToMatchBackgroundOfButton:(UIButton *)sender
 {
     [self.body.textStorage addAttribute:NSForegroundColorAttributeName
@@ -58,3 +86,4 @@
 }
 
 @end
+

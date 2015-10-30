@@ -24,15 +24,13 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a52-0C-TvN">
-                                <rect key="frame" x="20" y="550" width="50" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvC-KR-qPN">
+                                <rect key="frame" x="236" y="550" width="67" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
-                                <state key="normal" title="Outline"/>
+                                <state key="normal" title="Unoutline"/>
                                 <connections>
-                                    <action selector="outlineBodySelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2oh-R9-tLB"/>
-                                    <action selector="outlineSelectionBodySelection" destination="BYZ-38-t0r" eventType="touchUpInside" id="qi5-E1-Oqd"/>
-                                    <action selector="outlineSelectionBodySelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X8a-jj-qC7"/>
+                                    <action selector="unoutlineBodySelection" destination="BYZ-38-t0r" eventType="touchUpInside" id="PIT-Dv-Ocl"/>
+                                    <action selector="unoutlineBodySelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Qp-O0-Ieb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jC7-mO-ekF">
@@ -74,13 +72,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvC-KR-qPN">
-                                <rect key="frame" x="236" y="550" width="67" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a52-0C-TvN">
+                                <rect key="frame" x="20" y="550" width="75" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Unoutline"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Outline"/>
                                 <connections>
-                                    <action selector="unoutlineBodySelection" destination="BYZ-38-t0r" eventType="touchUpInside" id="PIT-Dv-Ocl"/>
-                                    <action selector="unoutlineBodySelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Qp-O0-Ieb"/>
+                                    <action selector="outlineBodySelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2oh-R9-tLB"/>
+                                    <action selector="outlineSelectionBodySelection" destination="BYZ-38-t0r" eventType="touchUpInside" id="qi5-E1-Oqd"/>
+                                    <action selector="outlineSelectionBodySelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X8a-jj-qC7"/>
                                 </connections>
                             </button>
                         </subviews>
