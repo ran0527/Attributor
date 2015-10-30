@@ -101,8 +101,6 @@
 		A2DF81571BE415D700C3F6CB /* Attributor */ = {
 			isa = PBXGroup;
 			children = (
-				A2DF815B1BE415D700C3F6CB /* AppDelegate.h */,
-				A2DF815C1BE415D700C3F6CB /* AppDelegate.m */,
 				A2DF815E1BE415D700C3F6CB /* ViewController.h */,
 				A2DF815F1BE415D700C3F6CB /* ViewController.m */,
 				A2DF81611BE415D700C3F6CB /* Main.storyboard */,
@@ -117,6 +115,8 @@
 		A2DF81581BE415D700C3F6CB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A2DF815B1BE415D700C3F6CB /* AppDelegate.h */,
+				A2DF815C1BE415D700C3F6CB /* AppDelegate.m */,
 				A2DF81591BE415D700C3F6CB /* main.m */,
 			);
 			name = "Supporting Files";
