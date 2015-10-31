@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     NSMutableAttributedString *title =
     [[NSMutableAttributedString alloc] initWithString:self.outlineButton.currentTitle];
-    [title setAttributes:@{ NSStrokeColorAttributeName: @3,
+    [title setAttributes:@{ NSStrokeWidthAttributeName: @3,
                             NSStrokeColorAttributeName: self.outlineButton.tintColor }
                    range:NSMakeRange(0, [title length])];
     [self.outlineButton setAttributedTitle:title forState:UIControlStateNormal];
@@ -40,6 +40,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+    [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIContentSizeCategoryDidChangeNotification
                                                   object:nil];
@@ -63,21 +64,18 @@
                                   range:self.body.selectedRange];
 }
 
-- (IBAction)outlineSelectionBodySelection:(id)sender
+- (IBAction)outlineBodySelection
 {
-    [self.body.textStorage addAttributes:@{ NSStrokeWidthAttributeName: @-3,
-                                            NSStrokeColorAttributeName: [UIColor blackColor] }
+    [self.body.textStorage addAttributes:@{ NSStrokeWidthAttributeName :@-3,
+                                            NSStrokeColorAttributeName : [UIColor blackColor] }
                                    range:self.body.selectedRange];
 }
 
-- (IBAction)unoutlineBodySelection:(id)sender
+- (IBAction)unoutlineBodySelection
 {
-    [self.body.textStorage removeAttribute:NSStrokeColorAttributeName
+    [self.body.textStorage removeAttribute:NSStrokeWidthAttributeName
                                      range:self.body.selectedRange];
 }
-
-
-
 
 
 - (void)didReceiveMemoryWarning {
